@@ -326,6 +326,24 @@ func (c *Agent) NumReplicas() int {
 	return len(routingInfo.vbMap[0]) - 1
 }
 
+// Returns number of servers accessible for K/V.
+func (c *Agent) NumServers() int {
+	routingInfo := c.routingInfo.get()
+	if routingInfo == nil {
+		return 0
+	}
+	return len(routingInfo.queues)
+}
+
+// Returns vBucket map.
+func (c *Agent) VbMap() [][]int {
+	routingInfo := c.routingInfo.get()
+	if routingInfo == nil {
+		return [][]int{}
+	}
+	return routingInfo.vbMap
+}
+
 // Returns all the available endpoints for performing
 // map-reduce queries.
 func (agent *Agent) CapiEps() []string {
