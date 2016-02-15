@@ -2,7 +2,8 @@ package gocb
 
 import (
 	"encoding/json"
-	"github.com/couchbase/gocb/gocbcore"
+
+	"github.com/avsej/gocb/gocbcore"
 )
 
 type subDocResult struct {

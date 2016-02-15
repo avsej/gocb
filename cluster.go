@@ -3,9 +3,10 @@ package gocb
 import (
 	"crypto/tls"
 	"errors"
-	"github.com/couchbase/gocb/gocbcore"
 	"net/http"
 	"time"
+
+	"github.com/avsej/gocb/gocbcore"
 )
 
 type Cluster struct {

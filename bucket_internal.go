@@ -1,7 +1,7 @@
 package gocb
 
 import (
-	"github.com/couchbase/gocb/gocbcore"
+	"github.com/avsej/gocb/gocbcore"
 )
 
 type bucketInternal struct {
